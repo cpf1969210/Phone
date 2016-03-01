@@ -11,7 +11,7 @@ import android.view.ViewGroup;
  * @author chen
  * 2016/2/26
  */
-public class FragementMaillist extends Fragment {
+public class FragmentMaillist extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

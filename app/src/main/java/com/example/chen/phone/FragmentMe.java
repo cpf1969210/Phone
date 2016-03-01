@@ -10,7 +10,7 @@ import android.view.ViewGroup;
  * @author chen
  * 2016/2/26
  */
-public class FragementMe extends Fragment {
+public class FragmentMe extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

@@ -6,21 +6,24 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+
 /**
  * @author chen
  * 2016/2/26
  */
-public class FragementMall extends Fragment {
-
+public class FragmentRecentCalls extends Fragment {
+    private ListView callLogListView;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
     }
     @Override
     public View onCreateView(LayoutInflater inflater,
                              @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         // TODO Auto-generated method stub
-        return inflater.inflate(R.layout.fragement_mall, null);
+        return inflater.inflate(R.layout.fragement_recent_calls, null);
     }
 }

@@ -14,11 +14,11 @@ public class MainActivity extends FragmentActivity {
     //声明变量
     private Fragment contentFragment;
     private RadioGroup myTabRg;
-    private FragementMaillist maillist;
-    private FragementMall mall;
-    private FragementMe me;
-    private FragementPhone phone;
-    private FragementRecentCalls recent;
+    private FragmentMaillist maillist;
+    private FragmentMall mall;
+    private FragmentMe me;
+    private FragmentPhone phone;
+    private FragmentRecentCalls recent;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class MainActivity extends FragmentActivity {
 
     }
     public void initView() {
-        phone = new FragementPhone();
+        phone = new FragmentPhone();
         getSupportFragmentManager().beginTransaction().replace(R.id.main_content, phone).commit();
         myTabRg = (RadioGroup) findViewById(R.id.tab_menu);
         myTabRg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -39,30 +39,27 @@ public class MainActivity extends FragmentActivity {
                 // TODO Auto-generated method stub
                 switch (checkedId) {
                     case R.id.rbPhone:
-                        phone = new FragementPhone();
+                        phone = new FragmentPhone();
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_content, phone)
                                 .commit();
                         break;
                     case R.id.rbRecent:
-//                        if (recent == null) {
-//                            recent = new FragementRecentCalls();
-//                        }
-                        recent = new FragementRecentCalls();
+                        recent = new FragmentRecentCalls();
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_content, recent)
                                 .commit();
                         break;
                     case R.id.rbMail:
-                        maillist = new FragementMaillist();
+                        maillist = new FragmentMaillist();
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_content, maillist)
                                 .commit();
                         break;
                     case R.id.rbMall:
-                        mall = new FragementMall();
+                        mall = new FragmentMall();
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_content, mall)
                                 .commit();
                         break;
                     case R.id.rbMe:
-                        me = new FragementMe();
+                        me = new FragmentMe();
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_content, me)
                                 .commit();
                         break;
