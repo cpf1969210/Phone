@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 /**
  * @author chen
- * 2016/2/26
+ *         2016/2/26
  */
 public class FragmentMaillist extends Fragment {
 
@@ -20,9 +20,10 @@ public class FragmentMaillist extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater,
-                             @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // TODO Auto-generated method stub
-        return inflater.inflate(R.layout.fragement_maillist, null);
+        View view = inflater.inflate(R.layout.fragement_maillist, container, false);
+        return view;
+
     }
 }

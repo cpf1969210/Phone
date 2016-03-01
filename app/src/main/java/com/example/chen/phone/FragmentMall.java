@@ -18,9 +18,10 @@ public class FragmentMall extends Fragment {
 
     }
     @Override
-    public View onCreateView(LayoutInflater inflater,
-                             @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,  Bundle savedInstanceState) {
         // TODO Auto-generated method stub
-        return inflater.inflate(R.layout.fragement_mall, null);
+        View view = inflater.inflate(R.layout.fragement_mall, container, false);
+        /*return inflater.inflate(R.layout.fragement_mall, null);*/
+        return  view;
     }
 }

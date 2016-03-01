@@ -19,9 +19,10 @@ public class FragmentMe extends Fragment {
 
     }
     @Override
-    public View onCreateView(LayoutInflater inflater,
-                             @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,  Bundle savedInstanceState) {
         // TODO Auto-generated method stub
-        return inflater.inflate(R.layout.fragement_me, null);
+        View view = inflater.inflate(R.layout.fragement_me, container, false);
+        return view;
+        /*return inflater.inflate(R.layout.fragement_me, null);*/
     }
 }
