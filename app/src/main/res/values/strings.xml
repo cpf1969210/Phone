@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">网之翼</string>
+    <string name="action_settings">Settings</string>
+    <string name="Telephone">电话</string>
+    <string name="call_records">最近通话</string>
+    <string name="mall">商城</string>
+    <string name="mail_list">通讯录</string>
+    <string name="me">个人中心</string>
+    <string name="maillist">通讯录</string>
+</resources>

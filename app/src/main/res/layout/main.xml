@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context="com.example.chen.phone.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.98" />
+
+    <RadioGroup
+        android:id="@+id/tab_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbPhone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@color/DarkGray"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/tab_selector_phone"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="电话"
+            android:textColor="@color/tab_selector_tv_color" />
+
+        <RadioButton
+            android:id="@+id/rbRecent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@color/DarkGray"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/tab_selector_recent"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="最近通话"
+            android:textColor="@color/tab_selector_tv_color" />
+
+        <RadioButton
+            android:id="@+id/rbMail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@color/DarkGray"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/tab_selector_mail"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="通讯录"
+            android:textColor="@color/tab_selector_tv_color" />
+
+        <RadioButton
+            android:id="@+id/rbMall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@color/DarkGray"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/tab_selector_mall"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="商城"
+            android:textColor="@color/tab_selector_tv_color" />
+
+        <RadioButton
+            android:id="@+id/rbMe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@color/DarkGray"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/tab_selector_me"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="个人中心"
+            android:textColor="@color/tab_selector_tv_color" />
+
+
+    </RadioGroup>
+</LinearLayout>
