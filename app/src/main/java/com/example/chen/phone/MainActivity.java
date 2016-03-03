@@ -1,7 +1,6 @@
 package com.example.chen.phone;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.widget.RadioGroup;
 
@@ -12,7 +11,7 @@ import android.widget.RadioGroup;
 public class MainActivity extends FragmentActivity {
 
     //声明变量
-    private Fragment contentFragment;
+
     private RadioGroup myTabRg;
     private FragmentMaillist maillist;
     private FragmentMall mall;
@@ -29,7 +28,7 @@ public class MainActivity extends FragmentActivity {
     }
     public void initView() {
         phone = new FragmentPhone();
-        getSupportFragmentManager().beginTransaction().replace(R.id.main_content, phone).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_content,phone).commit();
         myTabRg = (RadioGroup) findViewById(R.id.tab_menu);
         myTabRg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
