@@ -23,8 +23,8 @@ public class FragmentRecentCalls extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,  Bundle savedInstanceState) {
         // TODO Auto-generated method stub
-        View view = inflater.inflate(R.layout.fragement_recent_calls, container, false);
-        return view;
+        return   inflater.inflate(R.layout.fragement_recent_calls, container, false);
+
         /*return inflater.inflate(R.layout.fragement_recent_calls, null);*/
     }
 }
