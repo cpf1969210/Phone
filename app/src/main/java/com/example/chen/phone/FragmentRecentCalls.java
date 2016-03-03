@@ -25,6 +25,5 @@ public class FragmentRecentCalls extends Fragment {
         // TODO Auto-generated method stub
         return   inflater.inflate(R.layout.fragement_recent_calls, container, false);
 
-        /*return inflater.inflate(R.layout.fragement_recent_calls, null);*/
     }
 }
