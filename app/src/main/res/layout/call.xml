@@ -23,20 +23,29 @@
     </LinearLayout>
 
 
+    <!-- <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="New Button"
+         android:background="@drawable/image1"
+         android:id="@+id/button" />-->
+
     <LinearLayout
         android:id="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/DarkGray"
-        android:orientation="horizontal"></LinearLayout>
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        ></LinearLayout>
 
     <LinearLayout
         android:id="@+id/phonedata"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_gravity="bottom"
-        android:gravity="bottom">
+        android:gravity="bottom"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/phonenum"
@@ -44,7 +53,7 @@
             android:layout_height="50dp"
             android:background="@color/white"
             android:gravity="center"
-            android:textSize="40sp" />
+            android:textSize="60dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -240,20 +249,19 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/DarkGray"
-            android:orientation="horizontal"></LinearLayout>
-
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/DarkGray"
+        android:orientation="horizontal"></LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
         android:layout_gravity="bottom"
-        android:gravity="bottom"
         android:orientation="horizontal">
 
         <Button
