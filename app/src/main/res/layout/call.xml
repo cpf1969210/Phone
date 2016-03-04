@@ -22,32 +22,37 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/contactList"
-        android:layout_width="fill_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:cacheColorHint="#00000000"></ListView>
 
     <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/DarkGray"
+        android:orientation="horizontal"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/phonedata"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:gravity="bottom">
 
         <TextView
             android:id="@+id/phonenum"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@color/white"
-            android:textSize="20sp" />
+            android:gravity="center"
+            android:textSize="40sp" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/T9"
         android:layout_width="match_parent"
-        android:layout_height="353dp"
+        android:layout_height="312dp"
         android:layout_gravity="bottom"
         android:gravity="bottom"
-        android:id="@+id/T9"
         android:orientation="vertical">
 
         <LinearLayout
@@ -242,11 +247,13 @@
             android:orientation="horizontal"></LinearLayout>
 
 
-
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
         android:orientation="horizontal">
 
         <Button

@@ -2,9 +2,9 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <item android:drawable="@drawable/eject"
-        android:state_enabled="true"/>
     <item android:drawable="@drawable/hide"
+        android:state_enabled="true"/>
+    <item android:drawable="@drawable/eject"
         android:state_enabled="false"/>
 
     <item android:drawable="@drawable/eject"
