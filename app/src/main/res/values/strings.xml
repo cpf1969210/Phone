@@ -7,4 +7,5 @@
     <string name="mail_list">通讯录</string>
     <string name="me">个人中心</string>
     <string name="maillist">通讯录</string>
+    <string name="title_activity_call">Call</string>
 </resources>
