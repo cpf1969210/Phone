@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 /**
+ * 电话界面
  * @author chen
  *         2016/2/26
  */

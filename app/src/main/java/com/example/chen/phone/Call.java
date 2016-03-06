@@ -9,6 +9,11 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+/**
+ * 拨号界面
+ * @author chen
+ * 2016.3.6
+ */
 
 
 public class Call extends AppCompatActivity {
@@ -87,9 +92,9 @@ public class Call extends AppCompatActivity {
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.num0:
-
                     phonenum = (TextView) findViewById(R.id.phonenum);
                     phonenum.append("0");
+
                     break;
                 case R.id.num1:
                     phonenum = (TextView) findViewById(R.id.phonenum);

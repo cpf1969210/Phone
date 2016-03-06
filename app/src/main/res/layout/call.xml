@@ -53,7 +53,7 @@
             android:layout_height="50dp"
             android:background="@color/white"
             android:gravity="center"
-            android:textSize="60dp" />
+            android:textSize="30dp" />
     </LinearLayout>
 
     <LinearLayout
