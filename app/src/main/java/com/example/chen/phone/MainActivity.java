@@ -19,6 +19,8 @@ public class MainActivity extends FragmentActivity {
     private FragmentMall mall;
     private FragmentMe me;
     private FragmentPhone phone;
+    private FragmentMaillist fragmentMaillist;
+    private FragmentRecent fragmentRecent;
 
 
     @Override
@@ -42,14 +44,14 @@ public class MainActivity extends FragmentActivity {
                                 .commit();
                         break;
                     case R.id.rbRecent:
-                        Intent intent = new Intent();
-                        intent.setClass(MainActivity.this, ContactRecordListActivity.class);
-                        startActivity(intent);
+                        fragmentRecent=new FragmentRecent();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.main_content, fragmentRecent)
+                                .commit();
                         break;
                     case R.id.rbMail:
-                        Intent in = new Intent();
-                        in.setClass(MainActivity.this, ContactListActivity.class);
-                        startActivity(in);
+                        fragmentMaillist=new FragmentMaillist();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.main_content, fragmentMaillist)
+                                .commit();
                         break;
                     case R.id.rbMall:
                         mall = new FragmentMall();

@@ -1,6 +1,5 @@
 package com.example.chen.phone;
 
-import android.app.Activity;
 import android.content.AsyncQueryHandler;
 import android.content.ContentResolver;
 import android.content.Intent;
@@ -8,6 +7,10 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.CallLog;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 
@@ -20,11 +23,11 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * 通话记录列表
- * @author chen
- * 2016.3.6
+ * 最近通话界面
+ * @author CHEN
+ * 2016.3.7
  */
-public class ContactRecordListActivity extends Activity {
+public class FragmentRecent extends Fragment {
     //声明变量
     private RadioGroup myTabRg;
     private ListView callLogListView;
@@ -33,17 +36,26 @@ public class ContactRecordListActivity extends Activity {
     private List<CallLogBean> callLogs;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.contact_record_list_view);
 
-        callLogListView = (ListView) findViewById(R.id.call_log_list);
-        asyncQuery = new MyAsyncQueryHandler(getContentResolver());
-        init();
-        initView();
+
     }
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,  Bundle savedInstanceState) {
+        // TODO Auto-generated method stub
 
-    public void initView() {
+         View view=inflater.inflate(R.layout.fragment_recent, container, false);
+        callLogListView = (ListView) view.findViewById(R.id.call_log_list);
+        asyncQuery = new MyAsyncQueryHandler(getActivity().getContentResolver());
+        init();
+/*
+        initView();
+*/
+        return view;
+
+    }
+  /*  public void initView() {
         myTabRg = (RadioGroup) findViewById(R.id.tab_menu);
         myTabRg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -83,7 +95,7 @@ public class ContactRecordListActivity extends Activity {
 
             }
         });
-    }
+    }*/
 
     private void init() {
         Uri uri = CallLog.Calls.CONTENT_URI;
@@ -145,7 +157,9 @@ public class ContactRecordListActivity extends Activity {
     }
 
     private void setAdapter(List<CallLogBean> callLogs) {
-        adapter = new DialAdapter(this, callLogs);
+        adapter = new DialAdapter(getActivity(), callLogs);
         callLogListView.setAdapter(adapter);
     }
 }
+
+

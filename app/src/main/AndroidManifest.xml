@@ -12,10 +12,11 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <!-- 读短信权限 -->
     <uses-permission android:name="android.permission.READ_SMS" />
-    <!--允许应用程序读取通话记录-->
+    <!-- 允许应用程序读取通话记录 -->
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
-    <!--连接互联网-->
+    <!-- 连接互联网 -->
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -35,10 +36,11 @@
         <activity
             android:name=".Call"
             android:label="@string/title_activity_call"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FragmentRecent"
+            android:label="@string/title_activity_fragment_recent"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name="com.example.chen.phone.ContactRecordListActivity"></activity>
-        <activity android:name="com.example.chen.phone.ContactListActivity">
-        </activity>
     </application>
 
 </manifest>
