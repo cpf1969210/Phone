@@ -52,6 +52,7 @@ public class FragmentPhone extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
+                intent.putExtra("num", "1");
                 intent.setClass(getActivity(),Call.class);
                 startActivity(intent);
             }
@@ -61,6 +62,7 @@ public class FragmentPhone extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
+                intent.putExtra("num", "2");
                 intent.setClass(getActivity(),Call.class);
                 startActivity(intent);
             }
@@ -70,6 +72,7 @@ public class FragmentPhone extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
+                intent.putExtra("num", "3");
                 intent.setClass(getActivity(),Call.class);
                 startActivity(intent);
             }
@@ -79,6 +82,7 @@ public class FragmentPhone extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
+                intent.putExtra("num", "4");
                 intent.setClass(getActivity(),Call.class);
                 startActivity(intent);
             }
@@ -88,6 +92,7 @@ public class FragmentPhone extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
+                intent.putExtra("num", "5");
                 intent.setClass(getActivity(),Call.class);
                 startActivity(intent);
             }
@@ -97,6 +102,7 @@ public class FragmentPhone extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
+                intent.putExtra("num", "6");
                 intent.setClass(getActivity(),Call.class);
                 startActivity(intent);
             }
@@ -106,6 +112,7 @@ public class FragmentPhone extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
+                intent.putExtra("num", "7");
                 intent.setClass(getActivity(),Call.class);
                 startActivity(intent);
             }
@@ -115,6 +122,7 @@ public class FragmentPhone extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
+                intent.putExtra("num", "8");
                 intent.setClass(getActivity(),Call.class);
                 startActivity(intent);
             }
@@ -124,6 +132,7 @@ public class FragmentPhone extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
+                intent.putExtra("num", "9");
                 intent.setClass(getActivity(),Call.class);
                 startActivity(intent);
             }
@@ -133,6 +142,7 @@ public class FragmentPhone extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
+                intent.putExtra("num", "*");
                 intent.setClass(getActivity(),Call.class);
                 startActivity(intent);
             }
@@ -142,6 +152,7 @@ public class FragmentPhone extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
+                intent.putExtra("num", "#");
                 intent.setClass(getActivity(),Call.class);
                 startActivity(intent);
             }
@@ -151,6 +162,7 @@ public class FragmentPhone extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
+                intent.putExtra("num", "0");
                 intent.setClass(getActivity(),Call.class);
                 startActivity(intent);
             }

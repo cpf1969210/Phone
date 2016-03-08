@@ -123,14 +123,16 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/imageView"
+                        android:id="@+id/admin_login"
+                        android:layout_gravity="center"
                         android:background="@drawable/alogo_admin"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="管理员登录"
-                        android:id="@+id/textView20" />
+                        android:layout_gravity="center"
+                        android:id="@+id/text_login" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -143,12 +145,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/imageView2"
+                        android:layout_gravity="center"
                         android:background="@drawable/alogo_query"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="话单查询"
+                        android:layout_gravity="center"
                         android:id="@+id/textView21" />
                 </LinearLayout>
 
@@ -162,12 +166,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/imageView3"
+                        android:layout_gravity="center"
                         android:background="@drawable/alogo_recharge"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="充值卡充值"
+                        android:layout_gravity="center"
                         android:id="@+id/textView22" />
                 </LinearLayout>
 
@@ -181,12 +187,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/imageView4"
+                        android:layout_gravity="center"
                         android:background="@drawable/alogo_member"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="开通会员"
+                        android:layout_gravity="center"
                         android:id="@+id/textView23" />
                 </LinearLayout>
             </LinearLayout>
@@ -207,12 +215,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/imageView5"
+                        android:layout_gravity="center"
                         android:background="@drawable/alogo_friends"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="推荐好友"
+                        android:layout_gravity="center"
                         android:id="@+id/textView24" />
                 </LinearLayout>
 
@@ -226,12 +236,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/imageView6"
+                        android:layout_gravity="center"
                         android:background="@drawable/alogo_description"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="资费说明"
+                        android:layout_gravity="center"
                         android:id="@+id/textView25" />
                 </LinearLayout>
 
@@ -245,12 +257,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/imageView7"
+                        android:layout_gravity="center"
                         android:background="@drawable/alogo_ownership"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="设置归属地"
+                        android:layout_gravity="center"
                         android:id="@+id/textView26" />
                 </LinearLayout>
 
@@ -301,7 +315,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
                         android:layout_toRightOf="@+id/info_icon"
-                        android:text="我的优惠卷" />
+                        android:text="我的优惠券" />
 
 
 
@@ -428,7 +442,7 @@
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="10dp"
                         android:layout_toRightOf="@+id/upgrade"
-                        android:text="我的消息" />
+                        android:text="在线升级" />
 
 
 

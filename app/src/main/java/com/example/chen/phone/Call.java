@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * 拨号界面
@@ -64,6 +65,40 @@ public class Call extends AppCompatActivity {
         num11.setOnClickListener(listener);
         delete.setOnClickListener(listener);
         dial.setOnClickListener(listener);
+        phonenum = (TextView) findViewById(R.id.phonenum);
+
+        Intent intent=getIntent();
+        String Stringa=intent.getStringExtra("num");
+        if(Stringa.equals("0")){
+            phonenum.setText("0");
+        }else if(Stringa.equals("1")){
+            phonenum.setText("1");
+        }else if(Stringa.equals("2")){
+            phonenum.setText("2");
+        }else if(Stringa.equals("3")){
+            phonenum.setText("3");
+        }else if(Stringa.equals("4")){
+            phonenum.setText("4");
+        }else if(Stringa.equals("5")){
+            phonenum.setText("5");
+        }else if(Stringa.equals("6")){
+            phonenum.setText("6");
+        }else if(Stringa.equals("7")){
+            phonenum.setText("7");
+        }else if(Stringa.equals("8")){
+            phonenum.setText("8");
+        }else if(Stringa.equals("9")){
+            phonenum.setText("9");
+        }else if(Stringa.equals("*")){
+            phonenum.setText("*");
+        }else if(Stringa.equals("#")){
+            phonenum.setText("#");
+        }
+
+
+
+
+        //点击事件
         eject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,7 +129,6 @@ public class Call extends AppCompatActivity {
                 case R.id.num0:
                     phonenum = (TextView) findViewById(R.id.phonenum);
                     phonenum.append("0");
-
                     break;
                 case R.id.num1:
                     phonenum = (TextView) findViewById(R.id.phonenum);

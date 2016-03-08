@@ -43,7 +43,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:gravity="bottom"
         android:orientation="horizontal">
 
         <TextView
@@ -61,6 +60,8 @@
         android:layout_height="312dp"
         android:layout_gravity="bottom"
         android:gravity="bottom"
+        android:layout_marginBottom="0dp"
+        android:layout_weight="0.1"
         android:orientation="vertical">
 
         <LinearLayout
@@ -253,12 +254,15 @@
         android:layout_height="1dp"
         android:layout_gravity="bottom"
         android:background="@color/DarkGray"
+        android:layout_marginBottom="0dp"
+        android:gravity="bottom"
         android:orientation="horizontal"></LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_gravity="bottom"
+        android:layout_marginBottom="0dp"
         android:gravity="bottom"
         android:orientation="horizontal">
 

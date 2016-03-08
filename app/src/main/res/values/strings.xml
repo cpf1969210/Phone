@@ -9,4 +9,5 @@
     <string name="maillist">通讯录</string>
     <string name="title_activity_call">Call</string>
     <string name="title_activity_fragment_recent">FragmentRecent</string>
+    <string name="title_activity_fragment_me_login">FragmentMe_login</string>
 </resources>

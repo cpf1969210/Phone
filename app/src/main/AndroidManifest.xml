@@ -40,6 +40,10 @@
         <activity
             android:name=".FragmentRecent"
             android:label="@string/title_activity_fragment_recent"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FragmentMe_login"
+            android:label="@string/title_activity_fragment_me_login"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
