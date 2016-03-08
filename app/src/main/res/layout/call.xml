@@ -34,10 +34,9 @@
         android:id="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/DarkGray"
-        android:orientation="horizontal"
         android:layout_marginTop="30dp"
-        ></LinearLayout>
+        android:background="@color/DarkGray"
+        android:orientation="horizontal"></LinearLayout>
 
     <LinearLayout
         android:id="@+id/phonedata"
@@ -246,22 +245,21 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/num11" />
-
         </LinearLayout>
-
-
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_gravity="bottom"
         android:background="@color/DarkGray"
         android:orientation="horizontal"></LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="0dp"
         android:layout_gravity="bottom"
+        android:gravity="bottom"
         android:orientation="horizontal">
 
         <Button

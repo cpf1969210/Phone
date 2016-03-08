@@ -189,7 +189,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:background="@drawable/nearbybusinesses" />
+                        android:background="@drawable/hotline" />
 
                     <TextView
                         android:id="@+id/textView56"
@@ -197,7 +197,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
-                        android:text="附近商家"
+                        android:text="咨询热线"
                         android:textSize="15sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -219,7 +219,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:background="@drawable/hotline" />
+                        android:background="@drawable/game" />
 
                     <TextView
                         android:id="@+id/textView6"
@@ -227,7 +227,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
-                        android:text="咨询热线"
+                        android:text="游戏中心"
                         android:textSize="15sp" />
                 </LinearLayout>
 
@@ -242,8 +242,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-
-                        android:background="@drawable/hotline" />
+                        android:background="@drawable/contacts" />
 
                     <TextView
                         android:id="@+id/textView10"
@@ -251,7 +250,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
-                        android:text="游戏中心"
+                        android:text="常用电话"
                         android:textSize="15sp" />
                 </LinearLayout>
                 <LinearLayout
@@ -260,13 +259,12 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <ImageButton
+                    <ImageView
                         android:id="@+id/imageButton05"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-
-                        android:background="@drawable/hotline" />
+                        />
 
                     <TextView
                         android:id="@+id/textView100"
@@ -274,7 +272,6 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
-                        android:text="游戏中心"
                         android:textSize="15sp" />
                 </LinearLayout>
                 <LinearLayout
@@ -283,13 +280,12 @@
                     android:layout_weight="1"
                     android:orientation="vertical">
 
-                    <ImageButton
+                    <ImageView
                         android:id="@+id/imageButton6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-
-                        android:background="@drawable/hotline" />
+                       />
 
                     <TextView
                         android:id="@+id/textView11"
@@ -297,7 +293,6 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="10dp"
-                        android:text="常用中心"
                         android:textSize="15sp" />
                 </LinearLayout>
             </LinearLayout>
