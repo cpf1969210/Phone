@@ -44,6 +44,17 @@
         <activity
             android:name=".FragmentMe_login"
             android:label="@string/title_activity_fragment_me_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FragmentMe_feedback"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FragmentMall_website"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FragmentMall_mall"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".FragmentMall_number"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
