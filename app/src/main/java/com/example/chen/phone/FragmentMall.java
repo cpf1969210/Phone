@@ -32,14 +32,22 @@ public class FragmentMall extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         View view = inflater.inflate(R.layout.fragement_mall, container, false);
+        //实例化
+        //官网
         ImageButton officalwebsite = (ImageButton) view.findViewById(R.id.officalwebsite);
         TextView text_officalwebsite = (TextView) view.findViewById(R.id.text_officalwebsite);
+        //在线商城
         ImageButton onlineshoppingmall = (ImageButton) view.findViewById(R.id.onlineshoppingmall);
         TextView text_onlineshoppingmall = (TextView) view.findViewById(R.id.text_onlineshoppingmall);
+        //热线
         ImageButton hotline = (ImageButton) view.findViewById(R.id.hotline);
         TextView text_hotline = (TextView) view.findViewById(R.id.text_hotline);
+        //常用电话号码
         ImageButton commonnumber=(ImageButton)view.findViewById(R.id.commonnumber);
         TextView text_commonnumber=(TextView)view.findViewById(R.id.text_commonnumber);
+
+
+        //添加监听
         commonnumber.setOnClickListener(listener);
         text_commonnumber.setOnClickListener(listener);
         hotline.setOnClickListener(listener);
