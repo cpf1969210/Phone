@@ -1,5 +1,6 @@
 package com.example.chen.phone;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,9 +23,12 @@ import cn.sharesdk.framework.Platform.ShareParams;
 import cn.sharesdk.framework.PlatformActionListener;
 import cn.sharesdk.framework.ShareSDK;
 import cn.sharesdk.sina.weibo.SinaWeibo;
+import cn.sharesdk.system.text.ShortMessage;
 import cn.sharesdk.tencent.qq.QQ;
+import cn.sharesdk.tencent.qzone.QZone;
 import cn.sharesdk.wechat.friends.Wechat;
 import cn.sharesdk.wechat.moments.WechatMoments;
+
 /**
  * 个人主界面
  * @author chen
@@ -32,6 +36,8 @@ import cn.sharesdk.wechat.moments.WechatMoments;
  */
 public class FragmentMe extends Fragment implements PlatformActionListener{
     ShareDialog shareDialog;
+    private Context context;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,29 +111,31 @@ public class FragmentMe extends Fragment implements PlatformActionListener{
                             HashMap<String, Object> item = (HashMap<String, Object>) arg0.getItemAtPosition(arg2);
                             if (item.get("ItemText").equals("微博")) {
 
-                                //2、设置分享内容
+                                //设置分享内容
                                 ShareParams sp = new ShareParams();
-                                sp.setText("我是分享文本，啦啦啦~http://uestcbmi.com/"); //分享文本
+                               /* sp.setText("我是分享文本，啦啦啦~http://uestcbmi.com/"); //分享文本
+                                sp.setImageUrl("http://7sby7r.com1.z0.glb.clouddn.com/CYSJ_02.jpg");//网络图片rul*/
+                                sp.setTitle("网之翼科技有限公司");
+                                sp.setText("网之翼商城，最贴心最便捷最具潜力的微商城");
                                 sp.setImageUrl("http://7sby7r.com1.z0.glb.clouddn.com/CYSJ_02.jpg");//网络图片rul
-
-                                //3、非常重要：获取平台对象
+                                sp.setTitleUrl("http://www.sdwangzhiyi.com");  //网友点进链接后，可以看到分享的详情
+                                //非常重要：获取平台对象
                                 Platform sinaWeibo = ShareSDK.getPlatform(SinaWeibo.NAME);
                                 sinaWeibo.setPlatformActionListener(FragmentMe.this); // 设置分享事件回调
                                 // 执行分享
                                 sinaWeibo.share(sp);
 
-                            } else if (item.get("ItemText").equals("微信好友")) {
-                                Toast.makeText(getActivity(), "您点中了" + item.get("ItemText"), Toast.LENGTH_LONG).show();
+                            } else if (item.get("ItemText").equals("微信")) {
 
-                                //2、设置分享内容
+                                //设置分享内容
                                 ShareParams sp = new ShareParams();
                                 sp.setShareType(Platform.SHARE_WEBPAGE);//非常重要：一定要设置分享属性
-                                sp.setTitle("我是分享标题");  //分享标题
-                                sp.setText("我是分享文本，啦啦啦~http://uestcbmi.com/");   //分享文本
+                                sp.setTitle("网之翼科技有限公司");
+                                sp.setText("网之翼商城，最贴心最便捷最具潜力的微商城");
                                 sp.setImageUrl("http://7sby7r.com1.z0.glb.clouddn.com/CYSJ_02.jpg");//网络图片rul
-                                sp.setUrl("http://sharesdk.cn");   //网友点进链接后，可以看到分享的详情
+                                sp.setTitleUrl("http://www.sdwangzhiyi.com");  //网友点进链接后，可以看到分享的详情
 
-                                //3、非常重要：获取平台对象
+                                //非常重要：获取平台对象
                                 Platform wechat = ShareSDK.getPlatform(Wechat.NAME);
                                 wechat.setPlatformActionListener(FragmentMe.this); // 设置分享事件回调
                                 // 执行分享
@@ -135,32 +143,58 @@ public class FragmentMe extends Fragment implements PlatformActionListener{
 
 
                             } else if (item.get("ItemText").equals("朋友圈")) {
-                                //2、设置分享内容
+                                //设置分享内容
                                 ShareParams sp = new ShareParams();
                                 sp.setShareType(Platform.SHARE_WEBPAGE); //非常重要：一定要设置分享属性
-                                sp.setTitle("我是分享标题");  //分享标题
-                                sp.setText("我是分享文本，啦啦啦~http://uestcbmi.com/");   //分享文本
+                                sp.setTitle("网之翼科技有限公司");
+                                sp.setText("网之翼商城，最贴心最便捷最具潜力的微商城");
                                 sp.setImageUrl("http://7sby7r.com1.z0.glb.clouddn.com/CYSJ_02.jpg");//网络图片rul
-                                sp.setUrl("http://sharesdk.cn");   //网友点进链接后，可以看到分享的详情
+                                sp.setTitleUrl("http://www.sdwangzhiyi.com");  //网友点进链接后，可以看到分享的详情
 
-                                //3、非常重要：获取平台对象
+                                //非常重要：获取平台对象
                                 Platform wechatMoments = ShareSDK.getPlatform(WechatMoments.NAME);
                                 wechatMoments.setPlatformActionListener(FragmentMe.this); // 设置分享事件回调
                                 // 执行分享
                                 wechatMoments.share(sp);
 
                             } else if (item.get("ItemText").equals("QQ")) {
-                                //2、设置分享内容
+                                //设置分享内容
                                 ShareParams sp = new ShareParams();
-                                sp.setTitle("我是分享标题");
-                                sp.setText("我是分享文本，啦啦啦~http://uestcbmi.com/");
+                                sp.setTitle("网之翼科技有限公司");
+                                sp.setText("网之翼商城，最贴心最便捷最具潜力的微商城");
                                 sp.setImageUrl("http://7sby7r.com1.z0.glb.clouddn.com/CYSJ_02.jpg");//网络图片rul
-                                sp.setTitleUrl("http://www.baidu.com");  //网友点进链接后，可以看到分享的详情
-                                //3、非常重要：获取平台对象
+                                sp.setTitleUrl("http://www.sdwangzhiyi.com");  //网友点进链接后，可以看到分享的详情
+                                //非常重要：获取平台对象
                                 Platform qq = ShareSDK.getPlatform(QQ.NAME);
                                 qq.setPlatformActionListener(FragmentMe.this); // 设置分享事件回调
                                 // 执行分享
                                 qq.share(sp);
+                            }else if (item.get("ItemText").equals("空间")){
+                                //设置分享内容
+                                ShareParams sp = new ShareParams();
+                                sp.setTitle("网之翼科技有限公司");
+                                sp.setText("网之翼商城，最贴心最便捷最具潜力的微商城");
+                                sp.setImageUrl("http://7sby7r.com1.z0.glb.clouddn.com/CYSJ_02.jpg");//网络图片rul
+                                sp.setTitleUrl("http://www.sdwangzhiyi.com");  //网友点进链接后，可以看到分享的详情
+                                //非常重要：获取平台对象
+                                Platform qq = ShareSDK.getPlatform(QZone.NAME);
+                                qq.setPlatformActionListener(FragmentMe.this); // 设置分享事件回调
+                                // 执行分享
+                                qq.share(sp);
+                            }else if (item.get("ItemText").equals("短信")){
+                                //设置分享内容
+                                ShareParams sp = new ShareParams();
+                                sp.setTitle("网之翼科技有限公司");
+                                sp.setText("网之翼商城，最贴心最便捷最具潜力的微商城");
+/*
+                                sp.setImageUrl("http://7sby7r.com1.z0.glb.clouddn.com/CYSJ_02.jpg");//网络图片rul
+*/
+                                sp.setTitleUrl("http://www.sdwangzhiyi.com");  //网友点进链接后，可以看到分享的详情
+                                //非常重要：获取平台对象
+                                Platform circle = ShareSDK.getPlatform(ShortMessage.NAME);
+                                circle.setPlatformActionListener(FragmentMe.this); // 设置分享事件回调
+                                // 执行分享
+                                circle.share(sp);
 
                             }
 
@@ -191,9 +225,10 @@ public class FragmentMe extends Fragment implements PlatformActionListener{
 
                                 //2、设置分享内容
                                 ShareParams sp = new ShareParams();
-                                sp.setText("我是分享文本，啦啦啦~http://uestcbmi.com/"); //分享文本
+                                sp.setTitle("网之翼科技有限公司");
+                                sp.setText("网之翼商城，最贴心最便捷最具潜力的微商城");
                                 sp.setImageUrl("http://7sby7r.com1.z0.glb.clouddn.com/CYSJ_02.jpg");//网络图片rul
-
+                                sp.setTitleUrl("http://www.sdwangzhiyi.com");  //网友点进链接后，可以看到分享的详情
                                 //3、非常重要：获取平台对象
                                 Platform sinaWeibo = ShareSDK.getPlatform(SinaWeibo.NAME);
                                 sinaWeibo.setPlatformActionListener(FragmentMe.this); // 设置分享事件回调
@@ -206,11 +241,10 @@ public class FragmentMe extends Fragment implements PlatformActionListener{
                                 //2、设置分享内容
                                 ShareParams sp = new ShareParams();
                                 sp.setShareType(Platform.SHARE_WEBPAGE);//非常重要：一定要设置分享属性
-                                sp.setTitle("我是分享标题");  //分享标题
-                                sp.setText("我是分享文本，啦啦啦~http://uestcbmi.com/");   //分享文本
+                                sp.setTitle("网之翼科技有限公司");
+                                sp.setText("网之翼商城，最贴心最便捷最具潜力的微商城");
                                 sp.setImageUrl("http://7sby7r.com1.z0.glb.clouddn.com/CYSJ_02.jpg");//网络图片rul
-                                sp.setUrl("http://sharesdk.cn");   //网友点进链接后，可以看到分享的详情
-
+                                sp.setTitleUrl("http://www.sdwangzhiyi.com");  //网友点进链接后，可以看到分享的详情
                                 //3、非常重要：获取平台对象
                                 Platform wechat = ShareSDK.getPlatform(Wechat.NAME);
                                 wechat.setPlatformActionListener(FragmentMe.this); // 设置分享事件回调
@@ -222,10 +256,10 @@ public class FragmentMe extends Fragment implements PlatformActionListener{
                                 //2、设置分享内容
                                 ShareParams sp = new ShareParams();
                                 sp.setShareType(Platform.SHARE_WEBPAGE); //非常重要：一定要设置分享属性
-                                sp.setTitle("我是分享标题");  //分享标题
-                                sp.setText("我是分享文本，啦啦啦~http://uestcbmi.com/");   //分享文本
+                                sp.setTitle("网之翼科技有限公司");
+                                sp.setText("网之翼商城，最贴心最便捷最具潜力的微商城");
                                 sp.setImageUrl("http://7sby7r.com1.z0.glb.clouddn.com/CYSJ_02.jpg");//网络图片rul
-                                sp.setUrl("http://sharesdk.cn");   //网友点进链接后，可以看到分享的详情
+                                sp.setTitleUrl("http://www.sdwangzhiyi.com");  //网友点进链接后，可以看到分享的详情
 
                                 //3、非常重要：获取平台对象
                                 Platform wechatMoments = ShareSDK.getPlatform(WechatMoments.NAME);
@@ -236,10 +270,10 @@ public class FragmentMe extends Fragment implements PlatformActionListener{
                             } else if (item.get("ItemText").equals("QQ")) {
                                 //2、设置分享内容
                                 ShareParams sp = new ShareParams();
-                                sp.setTitle("我是分享标题");
-                                sp.setText("我是分享文本，啦啦啦~http://uestcbmi.com/");
+                                sp.setTitle("网之翼科技有限公司");
+                                sp.setText("网之翼商城，最贴心最便捷最具潜力的微商城");
                                 sp.setImageUrl("http://7sby7r.com1.z0.glb.clouddn.com/CYSJ_02.jpg");//网络图片rul
-                                sp.setTitleUrl("http://www.baidu.com");  //网友点进链接后，可以看到分享的详情
+                                sp.setTitleUrl("http://www.sdwangzhiyi.com");  //网友点进链接后，可以看到分享的详情
                                 //3、非常重要：获取平台对象
                                 Platform qq = ShareSDK.getPlatform(QQ.NAME);
                                 qq.setPlatformActionListener(FragmentMe.this); // 设置分享事件回调

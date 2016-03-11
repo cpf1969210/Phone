@@ -1,49 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:background="#00ffffff"
-              android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
 
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dip"
+        android:text="分享到"
+        android:textSize="16sp"
+        android:textColor="@color/black" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#B7B7B7" />
     <GridView
-        android:listSelector="@android:color/transparent"
         android:id="@+id/share_gridView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@mipmap/share_bg"
-        android:gravity="center"
-        android:horizontalSpacing="1dp"
-        android:numColumns="2"
-        android:paddingBottom="10dp"
-        android:paddingTop="15dp"
-        android:paddingLeft="9dp"
-        android:paddingRight="8dp"
-        android:verticalSpacing="1dp">
-    </GridView>
+        android:layout_weight="1"
+        android:numColumns="4"
+        android:padding="10dip"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="20dip" />
 
-
-    <RelativeLayout
+    <Button
         android:id="@+id/share_cancel"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginTop="10dp"
-        android:background="@mipmap/share_cancle"
-        android:gravity="center">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="5dp"
-            android:layout_marginTop="5dp"
-            android:text="取消"
-            android:textColor="@color/home"
-            android:textSize="18sp"/>
-
-    </RelativeLayout>
+        android:text="取消"
+        android:textSize="16sp" />
 
 </LinearLayout>
