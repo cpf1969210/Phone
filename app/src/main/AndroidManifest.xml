@@ -16,8 +16,6 @@
     <uses-permission android:name="android.permission.READ_CALL_LOG" />
     <!-- 连接互联网 -->
     <uses-permission android:name="android.permission.INTERNET" />
-
-
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -52,6 +50,7 @@
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
                 <data android:scheme="tencent1104646053" />
+
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.BROWSABLE" />
@@ -89,6 +88,12 @@
                 android:screenOrientation="portrait"
                 android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         </activity>
+        <activity android:name=".FragmentMe_orderquery"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".FragmentMe_recharge"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".FragmentMe_member"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

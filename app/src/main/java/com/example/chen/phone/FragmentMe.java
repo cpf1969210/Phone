@@ -61,12 +61,21 @@ public class FragmentMe extends Fragment implements PlatformActionListener{
         //分享
         ImageView  sharebutton=(ImageView)view.findViewById(R.id.shareButton);
         TextView text_share=(TextView)view.findViewById(R.id.text_shareButton);
+        //话单查询
+        ImageView orderquery=(ImageView)view.findViewById(R.id.orderquery);
+        TextView text_orderquery=(TextView)view.findViewById(R.id.text_orderquery);
+        TextView text_recharge= (TextView)view.findViewById(R.id.textrecharge);
+        ImageView image_recharge=(ImageView)view.findViewById(R.id.recharge);
         //加入监听
+        orderquery.setOnClickListener(listener);
+        text_orderquery.setOnClickListener(listener);
         sharebutton.setOnClickListener(listener);
         text_share.setOnClickListener(listener);
         feedback.setOnClickListener(listener);
         login.setOnClickListener(listener);
         text_login.setOnClickListener(listener);
+        text_recharge.setOnClickListener(listener);
+        image_recharge.setOnClickListener(listener);
         return view;
 
     }
@@ -289,6 +298,31 @@ public class FragmentMe extends Fragment implements PlatformActionListener{
                     });
 
                     break;
+                //话单查询
+                case R.id.orderquery:
+                    Intent intent3=new Intent();
+                    intent3.setClass(getActivity(), FragmentMe_orderquery.class);
+                    startActivity(intent3);
+                    break;
+                //话单查询
+                case R.id.text_orderquery:
+                    Intent intent4=new Intent();
+                    intent4.setClass(getActivity(),FragmentMe_orderquery.class);
+                    startActivity(intent4);
+                    break;
+                case R.id.recharge:
+                    Intent intent5=new Intent();
+                    intent5.setClass(getActivity(),FragmentMe_recharge.class);
+                    startActivity(intent5);
+                    break;
+                case R.id.textrecharge:
+                    Intent intent6=new Intent();
+                    intent6.setClass(getActivity(),FragmentMe_recharge.class);
+                    startActivity(intent6);
+                    break;
+
+
+
             }
         }
     };
