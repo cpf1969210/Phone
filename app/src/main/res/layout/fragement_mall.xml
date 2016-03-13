@@ -22,7 +22,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:id="@+id/scan"
-                android:background="@drawable/sweep" />
+                android:background="@drawable/scan" />
 
         </LinearLayout>
 
