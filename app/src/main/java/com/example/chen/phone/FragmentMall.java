@@ -11,8 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.zxing.client.android.CaptureActivity;
+
 
 /**
  * 商城主页面
@@ -21,6 +25,7 @@ import android.widget.Toast;
  *         2016/2/26
  */
 public class FragmentMall extends Fragment {
+    public static final int SCAN_CODE = 1;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,6 +38,8 @@ public class FragmentMall extends Fragment {
         // TODO Auto-generated method stub
         View view = inflater.inflate(R.layout.fragement_mall, container, false);
         //实例化
+        //扫一扫
+        ImageView scan=(ImageView)view.findViewById(R.id.scan);
         //官网
         ImageButton officalwebsite = (ImageButton) view.findViewById(R.id.officalwebsite);
         TextView text_officalwebsite = (TextView) view.findViewById(R.id.text_officalwebsite);
@@ -56,6 +63,15 @@ public class FragmentMall extends Fragment {
         text_officalwebsite.setOnClickListener(listener);
         onlineshoppingmall.setOnClickListener(listener);
         text_onlineshoppingmall.setOnClickListener(listener);
+
+        scan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), CaptureActivity.class);
+                startActivityForResult(intent, SCAN_CODE);
+            }
+        });
+
         return view;
 
     }

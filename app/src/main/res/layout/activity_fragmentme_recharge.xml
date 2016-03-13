@@ -13,6 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/back"
+            android:layout_centerVertical="true"
             android:id="@+id/back"/>
         <TextView
             android:layout_width="match_parent"
@@ -58,10 +59,11 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:background="@color/StrongBlue"
         android:text="充值"
+        android:textColor="@color/white"
         android:textSize="30sp"
         android:id="@+id/button5"
         android:layout_gravity="center_horizontal" />

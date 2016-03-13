@@ -64,9 +64,15 @@ public class FragmentMe extends Fragment implements PlatformActionListener{
         //话单查询
         ImageView orderquery=(ImageView)view.findViewById(R.id.orderquery);
         TextView text_orderquery=(TextView)view.findViewById(R.id.text_orderquery);
+        //充值卡充值
         TextView text_recharge= (TextView)view.findViewById(R.id.textrecharge);
         ImageView image_recharge=(ImageView)view.findViewById(R.id.recharge);
+        //开通会员
+        ImageView vip=(ImageView)view.findViewById(R.id.vip);
+        TextView text_vip=(TextView)view.findViewById(R.id.text_vip);
         //加入监听
+        vip.setOnClickListener(listener);
+        text_vip.setOnClickListener(listener);
         orderquery.setOnClickListener(listener);
         text_orderquery.setOnClickListener(listener);
         sharebutton.setOnClickListener(listener);
@@ -310,19 +316,30 @@ public class FragmentMe extends Fragment implements PlatformActionListener{
                     intent4.setClass(getActivity(),FragmentMe_orderquery.class);
                     startActivity(intent4);
                     break;
+                //充值卡充值
                 case R.id.recharge:
                     Intent intent5=new Intent();
                     intent5.setClass(getActivity(),FragmentMe_recharge.class);
                     startActivity(intent5);
                     break;
+                //充值卡充值
                 case R.id.textrecharge:
                     Intent intent6=new Intent();
                     intent6.setClass(getActivity(),FragmentMe_recharge.class);
                     startActivity(intent6);
                     break;
-
-
-
+                //开通会员
+                case R.id.vip:
+                    Intent intent7=new Intent();
+                    intent7.setClass(getActivity(),FragmentMe_member.class);
+                    startActivity(intent7);
+                    break;
+                //开通会员
+                case R.id.text_vip:
+                    Intent intent8=new Intent();
+                    intent8.setClass(getActivity(),FragmentMe_member.class);
+                    startActivity(intent8);
+                    break;
             }
         }
     };

@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 /**
  * 电话界面
@@ -15,18 +16,18 @@ import android.widget.Button;
  */
 public class FragmentPhone extends Fragment {
     //声明对象
-    private Button num0;
-    private Button num1;
-    private Button num2;
-    private Button num3;
-    private Button num4;
-    private Button num5;
-    private Button num6;
-    private Button num7;
-    private Button num8;
-    private Button num9;
-    private Button num10;
-    private Button num11;
+    private ImageView num0;
+    private ImageView num1;
+    private ImageView num2;
+    private ImageView num3;
+    private ImageView num4;
+    private ImageView num5;
+    private ImageView num6;
+    private ImageView num7;
+    private ImageView num8;
+    private ImageView num9;
+    private ImageView num10;
+    private ImageView num11;
 
 
     @Override
@@ -34,18 +35,18 @@ public class FragmentPhone extends Fragment {
         // TODO Auto-generated method stub
         View view = inflater.inflate(com.example.chen.phone.R.layout.fragement_phone, container, false);
         //绑定对象
-        num1=(Button)view.findViewById(R.id.num1);
-        num2=(Button)view.findViewById(R.id.num2);
-        num3=(Button)view.findViewById(R.id.num3);
-        num4=(Button)view.findViewById(R.id.num4);
-        num5=(Button)view.findViewById(R.id.num5);
-        num6=(Button)view.findViewById(R.id.num6);
-        num7=(Button)view.findViewById(R.id.num7);
-        num8=(Button)view.findViewById(R.id.num8);
-        num9=(Button)view.findViewById(R.id.num9);
-        num10=(Button)view.findViewById(R.id.num10);
-        num11=(Button)view.findViewById(R.id.num11);
-        num0=(Button)view.findViewById(R.id.num0);
+        num1=(ImageView)view.findViewById(R.id.num1);
+        num2=(ImageView)view.findViewById(R.id.num2);
+        num3=(ImageView)view.findViewById(R.id.num3);
+        num4=(ImageView)view.findViewById(R.id.num4);
+        num5=(ImageView)view.findViewById(R.id.num5);
+        num6=(ImageView)view.findViewById(R.id.num6);
+        num7=(ImageView)view.findViewById(R.id.num7);
+        num8=(ImageView)view.findViewById(R.id.num8);
+        num9=(ImageView)view.findViewById(R.id.num9);
+        num10=(ImageView)view.findViewById(R.id.num10);
+        num11=(ImageView)view.findViewById(R.id.num11);
+        num0=(ImageView)view.findViewById(R.id.num0);
         //点击事件
         //数字一
         num1.setOnClickListener(new View.OnClickListener() {
