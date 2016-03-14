@@ -15,7 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.zxing.client.android.CaptureActivity;
+import com.example.chen.Zxing.Demo.CaptureActivity;
 
 
 /**

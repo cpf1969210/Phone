@@ -7,10 +7,12 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -70,7 +72,10 @@ public class FragmentMe extends Fragment implements PlatformActionListener{
         //开通会员
         ImageView vip=(ImageView)view.findViewById(R.id.vip);
         TextView text_vip=(TextView)view.findViewById(R.id.text_vip);
+        ImageView alogo_ownership=(ImageView)view.findViewById(R.id.alogo_ownership);
+
         //加入监听
+        alogo_ownership.setOnClickListener(listener);
         vip.setOnClickListener(listener);
         text_vip.setOnClickListener(listener);
         orderquery.setOnClickListener(listener);
@@ -339,6 +344,15 @@ public class FragmentMe extends Fragment implements PlatformActionListener{
                     Intent intent8=new Intent();
                     intent8.setClass(getActivity(),FragmentMe_member.class);
                     startActivity(intent8);
+                    break;
+                case R.id.alogo_ownership:
+
+                    new AlertDialog.Builder(getActivity())
+                            .setTitle("设置区号")
+                            .setView(new EditText(getActivity()))
+                            .setPositiveButton("确定", null)
+                            .setNegativeButton("取消", null)
+                            .show();
                     break;
             }
         }

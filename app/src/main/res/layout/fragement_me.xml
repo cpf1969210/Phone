@@ -256,7 +256,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/imageView7"
+                        android:id="@+id/alogo_ownership"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -482,6 +482,7 @@
                 android:layout_marginRight="10dp"
                 android:background="@drawable/shape"
                 android:text="退出登录"
+                android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
         </LinearLayout>
