@@ -86,13 +86,14 @@
     </LinearLayout>
     <Button
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:background="@color/chblue"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/StrongBlue"
         android:text="快速查询"
         android:textSize="30sp"
+        android:textColor="@color/white"
         android:id="@+id/button5"
         android:layout_gravity="center_horizontal" />
     <LinearLayout

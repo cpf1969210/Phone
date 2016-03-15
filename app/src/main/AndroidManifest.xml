@@ -35,10 +35,19 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.autofocus"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
 
     <application
         android:allowBackup="true"
@@ -47,7 +56,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.chen.fragment.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -56,15 +65,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-        <activity android:name="com.example.chen.Zxing.Demo.CaptureActivity"
-            android:screenOrientation="portrait"
+        <activity
+            android:name="com.example.chen.Zxing.Demo.CaptureActivity"
             android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-            android:windowSoftInputMode="stateAlwaysHidden">
-        </activity>
-
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
         <activity
             android:name="com.mob.tools.MobUIShell"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -73,7 +79,9 @@
             android:windowSoftInputMode="stateHidden|adjustResize">
             <intent-filter>
                 <data android:scheme="tencent1104646053" />
+
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -83,7 +91,7 @@
             android:label="@string/title_activity_call"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".FragmentRecent"
+            android:name="com.example.chen.fragment.FragmentRecent"
             android:label="@string/title_activity_fragment_recent"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -118,43 +126,56 @@
         <activity
             android:name=".FragmentMe_member"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="com.example.chen.number.air_hotel"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name="com.example.chen.number.hotel"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name="com.example.chen.number.taxi"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name="com.example.chen.number.bank"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name="com.example.chen.number.other_drive"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name="com.example.chen.number.car_rental"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name="com.example.chen.number.negotiable_securities"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name="com.example.chen.number.investment"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name="com.example.chen.number.Insurance"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name="com.example.chen.number.business_customer"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name="com.example.chen.number.game_customer"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name="com.example.chen.number.brand_customer"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name="com.example.chen.number.Alarm_rescue"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name="com.example.chen.number.public_service"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name="com.example.chen.number.Hotline"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name="com.example.chen.number.charitable"
-            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name="com.example.chen.number.air_hotel"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.chen.number.hotel"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.chen.number.taxi"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.chen.number.bank"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.chen.number.other_drive"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.chen.number.car_rental"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.chen.number.negotiable_securities"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.chen.number.investment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.chen.number.Insurance"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.chen.number.business_customer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.chen.number.game_customer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.chen.number.brand_customer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.chen.number.Alarm_rescue"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.chen.number.public_service"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.chen.number.Hotline"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.chen.number.charitable"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".FragmentMall_systemmessage"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
-    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
-    <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
 </manifest>

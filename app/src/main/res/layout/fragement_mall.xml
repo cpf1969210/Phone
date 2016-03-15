@@ -4,55 +4,48 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:background="@color/StrongBlue"
         android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="0dp"
+
+        <ImageView
+            android:id="@+id/scan"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:id="@+id/scan"
-                android:background="@drawable/scan" />
-
-        </LinearLayout>
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/scan" />
 
 
         <TextView
             android:id="@+id/texView8"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
             android:text="网之翼"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="30sp" />
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
 
-            <ImageView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-               android:background="@drawable/message" />
-        </LinearLayout>
+        <ImageView
+            android:id="@+id/system_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/message" />
 
-    </LinearLayout>
+
+    </RelativeLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:myattr="http://schemas.android.com/apk/res/com.example.chen.phone"
@@ -60,7 +53,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:context=".MainActivity">
+        tools:context="com.example.chen.fragment.MainActivity">
 
         <com.example.chen.view.SlidingSwitcherView
             android:layout_width="fill_parent"
