@@ -70,7 +70,7 @@
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name="com.mob.tools.MobUIShell"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -174,8 +174,10 @@
         <activity
             android:name="com.example.chen.number.charitable"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".FragmentMall_systemmessage"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".FragmentMall_systemmessage"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>
